@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<level>
+  <customers>
+    <moodSpeed>2</moodSpeed>
+    <number>45</number>
+    <choice1>4</choice1>
+    <choice2>7</choice2>
+    <quota>765</quota>
+  </customers>
+</level>
