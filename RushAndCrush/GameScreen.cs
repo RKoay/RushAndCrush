@@ -212,7 +212,7 @@ namespace RushAndCrush
         //pressing keys
         private void GameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            
+
             switch (e.KeyCode)
             {
                 case Keys.Left:
@@ -229,9 +229,71 @@ namespace RushAndCrush
                     break;
                 case Keys.Space:
                     spaceDown = true;
+                    foreach (Food f in foods)
+                    {
+                        if (chooser.x == f.x && chooser.y == f.y)
+                        {
+                            //adding your choices to here 
+                            yourchoice1.Add(f);
+                        }
+                    }
+                    foreach (Toppings t in toppings)
+                    {
+                        if (chooser.x == t.x && chooser.y == t.y)
+                        {
+                            yourchoice2.Add(t);
+                        }
+                    }
                     break;
                 case Keys.Enter:
                     enterDown = true;
+                    int counter1 = 0;
+                    int counter2 = 0;
+
+                    foreach (Food food in yourchoice1)
+                    {
+                        if (custochoice1.Contains(food))
+                        {
+                            counter1++;
+                        }
+                    }
+
+                    if (counter1 == yourchoice1.Count())
+                    {
+                        //both lists contain the same stuff
+                        mood.UpMood(50);
+                        
+                    }
+                    else if (counter1 == yourchoice1.Count() - 1)
+                    {
+                        //1 item is not the same when comparing both lists 
+                        mood.UpMood(30);
+
+                    }
+                    else if (counter1 == yourchoice1.Count() - 2)
+                    {
+                        //2 items are not the same when comparing both lists 
+                        mood.UpMood(10);
+                    }
+                    else
+                    {
+                        mood.DownMood(20);
+                    }
+                    foreach (Toppings t in yourchoice2)
+                    {
+                        if (custochoice2.Contains(t))
+                        {
+                            counter2++;
+                        }
+                    }
+                    if (counter2 == yourchoice2.Count())
+                    {
+                        mood.UpMood(10);
+                    }
+                    else
+                    {
+                        mood.DownMood(10);
+                    }
                     break;
                 case Keys.Escape:
                     escDown = true;
@@ -395,38 +457,10 @@ namespace RushAndCrush
                 mood.colour = Color.Yellow;
             }
 
-            if (spaceDown)
-            {
-                foreach (Food f in foods)
-                {
-                    if (chooser.x == f.x && chooser.y == f.y)
-                    {
-                        yourchoice1.Add(f);
-                        if (yourchoice1 == custochoice1)
-                        {
+           
 
-                        }
-                        else
-                        {
-
-                        }
-                    }
-                }
-
-                foreach (Toppings t in toppings)
-                {
-                    if (chooser.x == t.x && chooser.y == t.y)
-                    {
-                        yourchoice2.Add(t);
-                    }
-                }
-
-                //need to add controls first 
-                foreach (Drink d in drinks)
-                {
-                    
-                }
-            }
+                
+            
 
 
             

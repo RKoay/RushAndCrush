@@ -45,7 +45,8 @@ namespace RushAndCrush
 
         public void DownMood(int downLevel)
         {
-            
+            levelY = levelY + downLevel;
+            levelHeight = levelHeight + downLevel;
         }
 
     }
