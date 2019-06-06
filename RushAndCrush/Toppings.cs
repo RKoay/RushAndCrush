@@ -11,13 +11,15 @@ namespace RushAndCrush
     {
         public int x, y, w, h;
         public Color c;
-        public Toppings(int x_, int y_, int w_, int h_, Color c_)
+        public string type;
+        public Toppings(int x_, int y_, int w_, int h_, Color c_, string type_)
         {
             x = x_;
             y = y_;
             w = w_;
             h = h_;
             c = c_;
+            type = type_;
         }
     }
 }

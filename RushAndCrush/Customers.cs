@@ -34,14 +34,6 @@ namespace RushAndCrush
             h = h + 20;
 
         }
-
-        //public void CustoCollision(Customers c)
-        //{
-        //    Rectangle r = new Rectangle(c.x, c.y, c.w, c.h);
-        //    if (r.IntersectsWith(GameScreen))
-        //    {
-        //        c.x = 0;
-        //    }
-        //}
+        
     }
 }

@@ -10,7 +10,8 @@ namespace RushAndCrush
     class MoodLevel
     {
         public Color colour;
-        public int x, y, height, width, levelX, levelY, levelLength, levelHeight;
+        public int x, y, height, width;
+        public int levelX, levelY, levelLength, levelHeight;
 
         public MoodLevel(int x_, int y_, int width_, int height_, int levelX_, int levelY_, int levelLength_, int levelHeight_, Color levelColour_)
         {
@@ -38,16 +39,18 @@ namespace RushAndCrush
 
         public void UpMood(int upLevel)
         {
-            // moving the bar up depending. 
+            //Moving the bar up depending...
             levelY = levelY - upLevel;
             levelHeight = levelHeight + upLevel;
         }
 
         public void DownMood(int downLevel)
         {
+            //Moving the bar down depending
             levelY = levelY + downLevel;
-            levelHeight = levelHeight + downLevel;
+            levelHeight = levelHeight - downLevel;
         }
+        
 
     }
 }

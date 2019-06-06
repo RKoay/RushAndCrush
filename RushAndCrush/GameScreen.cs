@@ -23,15 +23,15 @@ namespace RushAndCrush
         //Relating to Levels
         List<Levels> levels = new List<Levels>();
         string levelNumber;
-        int moodspeed;
-        int number;
-        int choice1;
-        int choice2;
-        int quota;
+        int moodspeeds;
+        int numbers;
+        int choice1s;
+        int choice2s;
+        double quotas;
 
 
         //creating mood level 
-        MoodLevel mood = new MoodLevel(500, 100, 100, 400, 500, 300, 100, 200, Color.Yellow);
+        MoodLevel mood;
         Object chooser;
 
         //creating speech bubbles
@@ -54,10 +54,13 @@ namespace RushAndCrush
 
         SolidBrush objectbrush = new SolidBrush(Color.Wheat);
 
-        int customerNumber;
+        int customerNumber = 0;
+
         int customerselector;
 
-        int earnings;
+        //to calculate and display earnings
+        double money;
+        double earnings  = 0;
 
         Random r = new Random();
         Image customerImage;
@@ -93,36 +96,241 @@ namespace RushAndCrush
             loadLevel01();
             loadLevel02();
             loadLevel03();
-            OnStart();
             gameTimer.Enabled = true;
-
             switch (levelNumber)
             {
                 case "level01":
-                    moodspeed = Convert.ToInt16(levels[0].moodspeed);
-                    number = Convert.ToInt16(levels[0].custonumber);
-                    choice1 = Convert.ToInt16(levels[0].choiceone);
-                    choice2 = Convert.ToInt16(levels[0].choicetwo);
-                    quota = Convert.ToInt16(levels[0].quota);
+                    moodspeeds = Convert.ToInt16(levels[0].moodspeed);
+                    numbers = Convert.ToInt16(levels[0].custonumber);
+                    choice1s = Convert.ToInt16(levels[0].choiceone);
+                    choice2s = Convert.ToInt16(levels[0].choicetwo);
+                    quotas = Convert.ToDouble(levels[0].quota);
                     break;
                 case "level02":
-                    moodspeed = Convert.ToInt16(levels[1].moodspeed);
-                    number = Convert.ToInt16(levels[1].custonumber);
-                    choice1 = Convert.ToInt16(levels[1].choiceone);
-                    choice2 = Convert.ToInt16(levels[1].choicetwo);
-                    quota = Convert.ToInt16(levels[1].quota);
+                    moodspeeds = Convert.ToInt16(levels[1].moodspeed);
+                    numbers = Convert.ToInt16(levels[1].custonumber);
+                    choice1s = Convert.ToInt16(levels[1].choiceone);
+                    choice2s = Convert.ToInt16(levels[1].choicetwo);
+                    quotas = Convert.ToDouble(levels[1].quota);
                     break;
                 case "level03":
-                    moodspeed = Convert.ToInt16(levels[2].moodspeed);
-                    number = Convert.ToInt16(levels[2].custonumber);
-                    choice1 = Convert.ToInt16(levels[2].choiceone);
-                    choice2 = Convert.ToInt16(levels[2].choicetwo);
-                    quota = Convert.ToInt16(levels[2].quota);
+                    moodspeeds = Convert.ToInt16(levels[2].moodspeed);
+                    numbers = Convert.ToInt16(levels[2].custonumber);
+                    choice1s = Convert.ToInt16(levels[2].choiceone);
+                    choice2s = Convert.ToInt16(levels[2].choicetwo);
+                    quotas = Convert.ToDouble(levels[2].quota);
                     break;
             }
+            OnStart();
+            
+            
+        }
+
+        //pressing keys
+        private void GameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+
+            switch (e.KeyCode)
+            {
+                case Keys.Left:
+                    leftArrowDown = true;
+                    break;
+                case Keys.Right:
+                    rightArrowDown = true;
+                    break;
+                case Keys.Up:
+                    upArrowDown = true;
+                    break;
+                case Keys.Down:
+                    downArrowDown = true;
+                    break;
+                case Keys.Space:
+                    spaceDown = true;
+                    foreach (Food f in foods)
+                    {
+                        if (chooser.x == f.x && chooser.y == f.y)
+                        {
+                            //adding your choices to here 
+                            yourchoice1.Add(f);
+                            
+                        }
+
+                    }
+                    foreach (Toppings t in toppings)
+                    {
+                        if (chooser.x == t.x && chooser.y == t.y)
+                        {
+                            yourchoice2.Add(t);
+                        }
+                    }
+                    break;
+                case Keys.Enter:
+                    enterDown = true;
+                    if (custochoice1.Count() == yourchoice1.Count())
+                    {
+                        foreach (Food f in custochoice1)
+                        {
+                            if (yourchoice1.Any(item => item.type == f.type))
+                            {
+                                mood.UpMood(50);
+                            }
+                            else
+                            {
+                                mood.DownMood(30);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        mood.DownMood(30);
+                    }
+
+                    if (custochoice2.Count() == yourchoice2.Count())
+                    {
+                        foreach (Toppings t in custochoice2)
+                        {
+                            if (yourchoice2.Any(item => item.type == t.type))
+                            {
+                                mood.UpMood(20);
+                            }
+                            else
+                            {
+                                mood.DownMood(10);
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        mood.DownMood(10);
+                    }
+
+                    gameTimer.Enabled = false;
+                    TimerOff();
+                    break;
+                case Keys.Escape:
+                    escDown = true;
+                    break;
+            }
+        }
+
+        //releasing key
+        private void GameScreen_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+
+                case Keys.Left:
+                    leftArrowDown = false;
+                    if (chooser.x > 20)
+                    {
+                        chooser.chooserMove(foodw + 10, 0, "left");
+                    }
+                    Refresh();
+                    break;
+                case Keys.Right:
+                    rightArrowDown = false;
+                    if (chooser.x < 670)
+                    {
+                        chooser.chooserMove(foodw + 10, 0, "right");
+                    }
+                    Refresh();
+                    break;
+                case Keys.Up:
+                    upArrowDown = false;
+                    if (chooser.y == 917)
+                    {
+                        chooser.chooserMove(0, foodh + 10, "up");
+                    }
+                    Refresh();
+                    break;
+                case Keys.Down:
+                    downArrowDown = false;
+                    if (chooser.y == 735)
+                    {
+                        chooser.chooserMove(0, foodh + 10, "down");
+                    }
+                    Refresh();
+                    break;
+                case Keys.Space:
+                    spaceDown = false;
+                    break;
+                case Keys.Enter:
+                    enterDown = false;
+                    break;
+                case Keys.Escape:
+                    escDown = false;
+                    break;
+            }
+        }
+
+        public void OnStart()
+        {
+            //creating counter
+            Object counter = new Object(counterx, countery - (counterh / 2), counterw, counterh, Color.Black);
+            //creating incounter
+            Object incounter = new Object(incounterx, incountery, incounterw, incounterh, Color.White);
+            //creating holder
+            Object holder = new Object(holderx, holdery, holderw, holderh, Color.DarkRed);
+
+            //creating the chooser
+            chooser = new Object(20, 735, foodw, foodh, Color.Black);
+            //foodw is 120
+            //foodh is 172
+
+            //creating foods 
+            Food f1 = new Food(20, 735, foodw, foodh, RushAndCrush.Properties.Resources.whiteb, "white");
+            Food f2 = new Food(150, 735, foodw, foodh, RushAndCrush.Properties.Resources.brownb, "brown");
+            Food f3 = new Food(280, 735, foodw, foodh, RushAndCrush.Properties.Resources.sesameb, "sesame");
+            Food f4 = new Food(410, 735, foodw, foodh, RushAndCrush.Properties.Resources.veg1, "veg1");
+            Food f5 = new Food(540, 735, foodw, foodh, RushAndCrush.Properties.Resources.veg2, "veg2");
+            Food f6 = new Food(670, 735, foodw, foodh, RushAndCrush.Properties.Resources.veg3, "veg3");
+            Toppings t7 = new Toppings(20, 917, foodw, foodh, Color.Brown, "brown");
+            Toppings t8 = new Toppings(150, 917, foodw, foodh, Color.Red, "red");
+            Toppings t9 = new Toppings(280, 917, foodw, foodh, Color.Yellow, "yellow");
+            Food f10 = new Food(410, 917, foodw, foodh, RushAndCrush.Properties.Resources.meat1, "meat1");
+            Food f11 = new Food(540, 917, foodw, foodh, RushAndCrush.Properties.Resources.meat2, "meat2");
+            Food f12 = new Food(670, 917, foodw, foodh, RushAndCrush.Properties.Resources.meat3, "meat3");
+            Drink dr1 = new Drink(holderx + (holderw - drinkw) / 2, holdery + (holderh - drinkh - drinkh) / 3, drinkw, drinkh, RushAndCrush.Properties.Resources.strawberryd);
+            Drink dr2 = new Drink(holderx + (holderw - drinkw) / 2, holdery + (holderh - drinkh - drinkh) / 3 + drinkh + (holderh - drinkh - drinkh) / 3, drinkw, drinkh, RushAndCrush.Properties.Resources.chocolated);
+
+            //adding to list 
+            items.Add(counter);
+            items.Add(incounter);
+            items.Add(holder);
+
+
+            foods.Add(f1);
+            foods.Add(f2);
+            foods.Add(f3);
+            foods.Add(f4);
+            foods.Add(f5);
+            foods.Add(f6);
+            //foods.Add(f7);
+            //foods.Add(f8);
+            //foods.Add(f9);
+            foods.Add(f10);
+            foods.Add(f11);
+            foods.Add(f12);
+
+            toppings.Add(t7);
+            toppings.Add(t8);
+            toppings.Add(t9);
+
+            drinks.Add(dr1);
+            drinks.Add(dr2);
+
+            //below are customers stuff
+
+            CustoCreater();
+
+            mood = new MoodLevel(500, 100, 100, 400, 500, 300, 100, 200, Color.Yellow);
+
+            money = (mood.levelHeight / mood.height) * 20;
+
 
             //customers' choices that are randomized
-            customerChoiceNumber = r.Next(choice1, choice2);
+            customerChoiceNumber = r.Next(choice1s, choice2s);
 
             //level one only deals with one choice#
             if (customerChoiceNumber == 3)
@@ -207,208 +415,12 @@ namespace RushAndCrush
                 GeneratingCustomerChoice2();
                 GeneratingCustomerChoice3();
             }
+
+
         }
-
-        //pressing keys
-        private void GameScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        
+        public void CustoCreater()
         {
-
-            switch (e.KeyCode)
-            {
-                case Keys.Left:
-                    leftArrowDown = true;
-                    break;
-                case Keys.Right:
-                    rightArrowDown = true;
-                    break;
-                case Keys.Up:
-                    upArrowDown = true;
-                    break;
-                case Keys.Down:
-                    downArrowDown = true;
-                    break;
-                case Keys.Space:
-                    spaceDown = true;
-                    foreach (Food f in foods)
-                    {
-                        if (chooser.x == f.x && chooser.y == f.y)
-                        {
-                            //adding your choices to here 
-                            yourchoice1.Add(f);
-                        }
-                    }
-                    foreach (Toppings t in toppings)
-                    {
-                        if (chooser.x == t.x && chooser.y == t.y)
-                        {
-                            yourchoice2.Add(t);
-                        }
-                    }
-                    break;
-                case Keys.Enter:
-                    enterDown = true;
-                    int counter1 = 0;
-                    int counter2 = 0;
-
-                    foreach (Food food in yourchoice1)
-                    {
-                        if (custochoice1.Contains(food))
-                        {
-                            counter1++;
-                        }
-                    }
-
-                    if (counter1 == yourchoice1.Count())
-                    {
-                        //both lists contain the same stuff
-                        mood.UpMood(50);
-                        
-                    }
-                    else if (counter1 == yourchoice1.Count() - 1)
-                    {
-                        //1 item is not the same when comparing both lists 
-                        mood.UpMood(30);
-
-                    }
-                    else if (counter1 == yourchoice1.Count() - 2)
-                    {
-                        //2 items are not the same when comparing both lists 
-                        mood.UpMood(10);
-                    }
-                    else
-                    {
-                        mood.DownMood(20);
-                    }
-                    foreach (Toppings t in yourchoice2)
-                    {
-                        if (custochoice2.Contains(t))
-                        {
-                            counter2++;
-                        }
-                    }
-                    if (counter2 == yourchoice2.Count())
-                    {
-                        mood.UpMood(10);
-                    }
-                    else
-                    {
-                        mood.DownMood(10);
-                    }
-                    break;
-                case Keys.Escape:
-                    escDown = true;
-                    break;
-            }
-        }
-
-        //releasing key
-        private void GameScreen_KeyUp(object sender, KeyEventArgs e)
-        {
-            switch (e.KeyCode)
-            {
-
-                case Keys.Left:
-                    leftArrowDown = false;
-                    if (chooser.x > 20)
-                    {
-                        chooser.chooserMove(foodw + 10, 0, "left");
-                    }
-                    Refresh();
-                    break;
-                case Keys.Right:
-                    rightArrowDown = false;
-                    if (chooser.x < 670)
-                    {
-                        chooser.chooserMove(foodw + 10, 0, "right");
-                    }
-                    Refresh();
-                    break;
-                case Keys.Up:
-                    upArrowDown = false;
-                    if (chooser.y == 917)
-                    {
-                        chooser.chooserMove(0, foodh + 10, "up");
-                    }
-                    Refresh();
-                    break;
-                case Keys.Down:
-                    downArrowDown = false;
-                    if (chooser.y == 735)
-                    {
-                        chooser.chooserMove(0, foodh + 10, "down");
-                    }
-                    Refresh();
-                    break;
-                case Keys.Space:
-                    spaceDown = false;
-                    break;
-                case Keys.Enter:
-                    enterDown = false;
-                    break;
-                case Keys.Escape:
-                    escDown = false;
-                    break;
-            }
-        }
-
-        public void OnStart()
-        {
-            //creating counter
-            Object counter = new Object(counterx, countery - (counterh / 2), counterw, counterh, Color.Black);
-            //creating incounter
-            Object incounter = new Object(incounterx, incountery, incounterw, incounterh, Color.White);
-            //creating holder
-            Object holder = new Object(holderx, holdery, holderw, holderh, Color.DarkRed);
-
-            //creating the chooser
-            chooser = new Object(20, 735, foodw, foodh, Color.Black);
-            //foodw is 120
-            //foodh is 172
-
-            //creating foods 
-            Food f1 = new Food(20, 735, foodw, foodh, RushAndCrush.Properties.Resources.whiteb);
-            Food f2 = new Food(150, 735, foodw, foodh, RushAndCrush.Properties.Resources.brownb);
-            Food f3 = new Food(280, 735, foodw, foodh, RushAndCrush.Properties.Resources.sesameb);
-            Food f4 = new Food(410, 735, foodw, foodh, RushAndCrush.Properties.Resources.veg1);
-            Food f5 = new Food(540, 735, foodw, foodh, RushAndCrush.Properties.Resources.veg2);
-            Food f6 = new Food(670, 735, foodw, foodh, RushAndCrush.Properties.Resources.veg3);
-            Toppings t7 = new Toppings(20, 917, foodw, foodh, Color.Brown);
-            Toppings t8 = new Toppings(150, 917, foodw, foodh, Color.Red);
-            Toppings t9 = new Toppings(280, 917, foodw, foodh, Color.Yellow);
-            Food f10 = new Food(410, 917, foodw, foodh, RushAndCrush.Properties.Resources.meat1);
-            Food f11 = new Food(540, 917, foodw, foodh, RushAndCrush.Properties.Resources.meat2);
-            Food f12 = new Food(670, 917, foodw, foodh, RushAndCrush.Properties.Resources.meat3);
-            Drink dr1 = new Drink(holderx + (holderw - drinkw)/2, holdery + (holderh - drinkh - drinkh)/3, drinkw, drinkh, RushAndCrush.Properties.Resources.strawberryd);
-            Drink dr2 = new Drink(holderx + (holderw - drinkw) / 2, holdery + (holderh - drinkh - drinkh)/3 + drinkh + (holderh - drinkh - drinkh) / 3, drinkw, drinkh, RushAndCrush.Properties.Resources.chocolated);
-
-            //adding to list 
-            items.Add(counter);
-            items.Add(incounter);
-            items.Add(holder);
-            
-
-            foods.Add(f1);
-            foods.Add(f2);
-            foods.Add(f3);
-            foods.Add(f4);
-            foods.Add(f5);
-            foods.Add(f6);
-            //foods.Add(f7);
-            //foods.Add(f8);
-            //foods.Add(f9);
-            foods.Add(f10);
-            foods.Add(f11);
-            foods.Add(f12);
-
-            toppings.Add(t7);
-            toppings.Add(t8);
-            toppings.Add(t9);
-
-            drinks.Add(dr1);
-            drinks.Add(dr2);
-
-            //below are customers stuff
-
             customerselector = r.Next(1, 11);
             if (customerselector == 1) { customerImage = RushAndCrush.Properties.Resources.p1; }
             if (customerselector == 2) { customerImage = RushAndCrush.Properties.Resources.p2; }
@@ -424,25 +436,38 @@ namespace RushAndCrush
             Customers c = new Customers(350, 479, 100, 100, customerImage);
             //400,475
             customers.Add(c);
-
+            //Adding a customer to the number to keep track of the numbers of customers
+            customerNumber++;
         }
+
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
+            //for (int i = 10; i >= 0; i--)
+            //{
+            //    outputLabel.Text += "\n" + i;
+            //}
+
+            
+            //for every customer in the list,
+
             foreach (Customers c in customers)
             {
+                //adding to counter foreach customers to keep track of the customers 
+                customerNumber++;
                 //moving the customers towards the counter
                 c.CustoMove();
+
 
                 if (c.x < 0) { c.x = 0; }
                 if (c.y < 100) { c.y = 100; }
                 if (c.h > 475) { c.h = 475; }
                 if (c.w > 480) { c.w = 480; }
+
             }
 
             //starting the level
-            mood.StartLevel(moodspeed);
-
+            mood.StartLevel(moodspeeds);
 
             if (mood.levelHeight < 100)
             {
@@ -457,17 +482,29 @@ namespace RushAndCrush
                 mood.colour = Color.Yellow;
             }
 
-           
-
-                
+            //if food is right or wrong, add the rightful amount of money
+            if (mood.levelY == mood.height + mood.y)
+            {
+                gameTimer.Enabled = false;
+                TimerOff();
+            }
             
-
-
-            
-            //your choices 
-
             Refresh();
         }
+
+        
+        public void TimerOff()
+        {
+            //mood.levelHeight/mood.height times 20
+            earnings += money;
+            moneyEarned.Text = "$ " + earnings;
+            customers.RemoveAt(0);
+            OnStart();
+            gameTimer.Enabled = true;
+
+
+        }
+
 
         public void GeneratingCustomerChoice1(int movex, int movey)
         {
@@ -476,49 +513,49 @@ namespace RushAndCrush
 
             if (cr1 == 1)
             {
-                Food f1 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.whiteb);
+                Food f1 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.whiteb, "white");
                 custochoice1.Add(f1);
 
             }
             else if (cr1 == 2)
             {
-                Food f2 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.brownb);
+                Food f2 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.brownb, "brown");
                 custochoice1.Add(f2);
 
             }
             else if (cr1 == 3)
             {
-                Food f3 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.sesameb);
+                Food f3 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.sesameb, "sesame");
                 custochoice1.Add(f3);
             }
             else if (cr1 == 4)
             {
-                Food f4 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.veg1);
+                Food f4 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.veg1, "veg1");
                 custochoice1.Add(f4);
             }
             if (cr1 == 5)
             {
-                Food f5 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.veg2);
+                Food f5 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.veg2, "veg2");
                 custochoice1.Add(f5);
             }
             if (cr1 == 6)
             {
-                Food f6 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.veg3);
+                Food f6 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.veg3, "veg3");
                 custochoice1.Add(f6);
             }
             if (cr1 == 7)
             {
-                Food f7 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.meat1);
+                Food f7 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.meat1, "meat1");
                 custochoice1.Add(f7);
             }
             if (cr1 == 8)
             {
-                Food f8 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.meat2);
+                Food f8 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.meat2, "meat2");
                 custochoice1.Add(f8);
             }
             if (cr1 == 9)
             {
-                Food f9 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.meat3);
+                Food f9 = new Food(780 + movex, 140 + movey, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.meat3, "meat3");
                 custochoice1.Add(f9);
             }
 
@@ -530,18 +567,18 @@ namespace RushAndCrush
 
             if (c2 == 1)
             {
-                Toppings to = new Toppings(870, 50, speechfoodw, speechfoodh, Color.Brown);
+                Toppings to = new Toppings(870, 50, speechfoodw, speechfoodh, Color.Brown, "brown");
                 custochoice2.Add(to);
 
             }
             else if (c2 == 2)
             {
-                Toppings tt = new Toppings(870, 50, speechfoodw, speechfoodh, Color.Red);
+                Toppings tt = new Toppings(870, 50, speechfoodw, speechfoodh, Color.Red, "red");
                 custochoice2.Add(tt);
             }
             else if (c2 == 3)
             {
-                Toppings tth = new Toppings(870, 50, speechfoodw, speechfoodh, Color.Yellow);
+                Toppings tth = new Toppings(870, 50, speechfoodw, speechfoodh, Color.Yellow, "yellow");
                 custochoice2.Add(tth);
             }
         }
@@ -686,6 +723,8 @@ namespace RushAndCrush
             e.Graphics.DrawRectangle(objectpen, mood.x, mood.y, mood.width, mood.height);
 
             objectpen.Color = speechbub.colour;
+            objectbrush.Color = Color.White;
+            e.Graphics.FillEllipse(objectbrush, speechbub.x, speechbub.y, speechbub.width, speechbub.height);
             e.Graphics.DrawEllipse(objectpen, speechbub.x, speechbub.y, speechbub.width, speechbub.height);
 
 
