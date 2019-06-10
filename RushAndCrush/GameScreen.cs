@@ -668,16 +668,16 @@ namespace RushAndCrush
                 {
                     moodspeed = reader.ReadString();
 
-                    reader.ReadToNextSibling("moodSpeed");
+                    reader.ReadToFollowing("number");
                     number = reader.ReadString();
 
-                    reader.ReadToNextSibling("number");
+                    reader.ReadToFollowing("choice1");
                     choice1 = reader.ReadString();
 
-                    reader.ReadToNextSibling("choice1");
+                    reader.ReadToFollowing("choice2");
                     choice2 = reader.ReadString();
 
-                    reader.ReadToNextSibling("choice2");
+                    reader.ReadToFollowing("quota");
                     quota = reader.ReadString();
 
                     Levels level2 = new Levels(moodspeed, number, choice1, choice2, quota);
@@ -702,16 +702,16 @@ namespace RushAndCrush
                 {
                     moodspeed = reader.ReadString();
 
-                    reader.ReadToNextSibling("moodSpeed");
+                    reader.ReadToFollowing("number");
                     number = reader.ReadString();
 
-                    reader.ReadToNextSibling("number");
+                    reader.ReadToFollowing("choice1");
                     choice1 = reader.ReadString();
 
-                    reader.ReadToNextSibling("choice1");
+                    reader.ReadToFollowing("choice2");
                     choice2 = reader.ReadString();
 
-                    reader.ReadToNextSibling("choice2");
+                    reader.ReadToFollowing("quota");
                     quota = reader.ReadString();
 
                     Levels level3 = new Levels(moodspeed, number, choice1, choice2, quota);
