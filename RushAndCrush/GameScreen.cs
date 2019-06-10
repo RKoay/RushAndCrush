@@ -22,7 +22,7 @@ namespace RushAndCrush
 
         //Relating to Levels
         List<Levels> levels = new List<Levels>();
-        string levelNumber;
+        int levelNumber;
         int moodspeeds;
         int numbers;
         int choice1s;
@@ -59,7 +59,6 @@ namespace RushAndCrush
         int customerselector;
 
         //to calculate and display earnings
-        double money;
         double earnings  = 0;
 
         Random r = new Random();
@@ -92,35 +91,12 @@ namespace RushAndCrush
         {
             InitializeComponent();
             //loading level1
-            levelNumber = "level01";
+            levelNumber = 1;
             loadLevel01();
             loadLevel02();
             loadLevel03();
             gameTimer.Enabled = true;
-            switch (levelNumber)
-            {
-                case "level01":
-                    moodspeeds = Convert.ToInt16(levels[0].moodspeed);
-                    numbers = Convert.ToInt16(levels[0].custonumber);
-                    choice1s = Convert.ToInt16(levels[0].choiceone);
-                    choice2s = Convert.ToInt16(levels[0].choicetwo);
-                    quotas = Convert.ToDouble(levels[0].quota);
-                    break;
-                case "level02":
-                    moodspeeds = Convert.ToInt16(levels[1].moodspeed);
-                    numbers = Convert.ToInt16(levels[1].custonumber);
-                    choice1s = Convert.ToInt16(levels[1].choiceone);
-                    choice2s = Convert.ToInt16(levels[1].choicetwo);
-                    quotas = Convert.ToDouble(levels[1].quota);
-                    break;
-                case "level03":
-                    moodspeeds = Convert.ToInt16(levels[2].moodspeed);
-                    numbers = Convert.ToInt16(levels[2].custonumber);
-                    choice1s = Convert.ToInt16(levels[2].choiceone);
-                    choice2s = Convert.ToInt16(levels[2].choicetwo);
-                    quotas = Convert.ToDouble(levels[2].quota);
-                    break;
-            }
+            
             OnStart();
             
             
@@ -204,7 +180,6 @@ namespace RushAndCrush
                     {
                         mood.DownMood(10);
                     }
-
                     gameTimer.Enabled = false;
                     TimerOff();
                     break;
@@ -266,6 +241,31 @@ namespace RushAndCrush
 
         public void OnStart()
         {
+            switch (levelNumber)
+            {
+                case 1:
+                    moodspeeds = Convert.ToInt16(levels[0].moodspeed);
+                    numbers = Convert.ToInt16(levels[0].custonumber);
+                    choice1s = Convert.ToInt16(levels[0].choiceone);
+                    choice2s = Convert.ToInt16(levels[0].choicetwo);
+                    quotas = Convert.ToDouble(levels[0].quota);
+                    break;
+                case 2:
+                    moodspeeds = Convert.ToInt16(levels[1].moodspeed);
+                    numbers = Convert.ToInt16(levels[1].custonumber); //apparently not in the correct format
+                    choice1s = Convert.ToInt16(levels[1].choiceone);
+                    choice2s = Convert.ToInt16(levels[1].choicetwo);
+                    quotas = Convert.ToDouble(levels[1].quota);
+                    break;
+                case 3:
+                    moodspeeds = Convert.ToInt16(levels[2].moodspeed);
+                    numbers = Convert.ToInt16(levels[2].custonumber);
+                    choice1s = Convert.ToInt16(levels[2].choiceone);
+                    choice2s = Convert.ToInt16(levels[2].choicetwo);
+                    quotas = Convert.ToDouble(levels[2].quota);
+                    break;
+            }
+
             //creating counter
             Object counter = new Object(counterx, countery - (counterh / 2), counterw, counterh, Color.Black);
             //creating incounter
@@ -325,9 +325,7 @@ namespace RushAndCrush
             CustoCreater();
 
             mood = new MoodLevel(500, 100, 100, 400, 500, 300, 100, 200, Color.Yellow);
-
-            money = (mood.levelHeight / mood.height) * 20;
-
+            
 
             //customers' choices that are randomized
             customerChoiceNumber = r.Next(choice1s, choice2s);
@@ -453,8 +451,6 @@ namespace RushAndCrush
 
             foreach (Customers c in customers)
             {
-                //adding to counter foreach customers to keep track of the customers 
-                customerNumber++;
                 //moving the customers towards the counter
                 c.CustoMove();
 
@@ -496,12 +492,37 @@ namespace RushAndCrush
         public void TimerOff()
         {
             //mood.levelHeight/mood.height times 20
-            earnings += money;
+            earnings += ((double)mood.levelHeight / (double)mood.height) * 20;
             moneyEarned.Text = "$ " + earnings;
-            customers.RemoveAt(0);
-            OnStart();
-            gameTimer.Enabled = true;
+            
+            //if customer number is smaller than the amount of customers in each level, proceed with the level
+            if (customerNumber < numbers)
+            {
+                customers.RemoveAt(0);
+                OnStart();
+                gameTimer.Enabled = true;
+            }
+            //if the amount of customers is equal to the amount of customers in each level, display the code
+            else if (customerNumber == numbers)
+            {
+                if (earnings >= quotas)
+                {
+                    levelNumber++;
+                    customers.RemoveAt(0);
+                    OnStart();
+                    gameTimer.Enabled = true;
+                }
+                else
+                {
+                    Form f = this.FindForm();
+                    f.Controls.Remove(value: this);
+                    GameOverScreen gos = new GameOverScreen();
+                    f.Controls.Add(gos);
 
+                    gos.Location = new Point((f.Width - gos.Width) / 2, (f.Height - gos.Height) / 2);
+                    gos.Focus();
+                }
+            }
 
         }
 
