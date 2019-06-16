@@ -19,6 +19,9 @@ namespace RushAndCrush
         List<Drink> drinks = new List<Drink>();
         List<Toppings> toppings = new List<Toppings>();
         List<Customers> customers = new List<Customers>();
+        //To block out the food that has already been selected
+        List<Object> coverUps = new List<Object>();
+        
 
         //Relating to Levels
         List<Levels> levels = new List<Levels>();
@@ -122,15 +125,18 @@ namespace RushAndCrush
                     break;
                 case Keys.Space:
                     spaceDown = true;
+                    //Coverups will need to be placed here 
+                    //Object coverUp = new Object(f.x, f.y, f.w, f.h, Color.Black);
+                    //coverUps.Add(coverUp);
                     foreach (Food f in foods)
                     {
                         if (chooser.x == f.x && chooser.y == f.y)
                         {
                             //adding your choices to here 
                             yourchoice1.Add(f);
+
                             
                         }
-
                     }
                     foreach (Toppings t in toppings)
                     {
@@ -142,43 +148,26 @@ namespace RushAndCrush
                     break;
                 case Keys.Enter:
                     enterDown = true;
-                    if (custochoice1.Count() == yourchoice1.Count())
+                    if (custochoice1.Count() == yourchoice1.Count() && custochoice2.Count() == yourchoice2.Count())
                     {
+                        //comparing both choices
                         foreach (Food f in custochoice1)
                         {
                             if (yourchoice1.Any(item => item.type == f.type))
                             {
+
                                 mood.UpMood(50);
+                                
                             }
                             else
                             {
-                                mood.DownMood(30);
+                                mood.DownMood(50);
                             }
                         }
                     }
-                    else
+                    else if (custochoice1.Count() != yourchoice1.Count() || custochoice2.Count() != yourchoice2.Count())
                     {
-                        mood.DownMood(30);
-                    }
-
-                    if (custochoice2.Count() == yourchoice2.Count())
-                    {
-                        foreach (Toppings t in custochoice2)
-                        {
-                            if (yourchoice2.Any(item => item.type == t.type))
-                            {
-                                mood.UpMood(20);
-                            }
-                            else
-                            {
-                                mood.DownMood(10);
-                            }
-
-                        }
-                    }
-                    else
-                    {
-                        mood.DownMood(10);
+                        mood.DownMood(50);
                     }
                     gameTimer.Enabled = false;
                     TimerOff();
@@ -350,7 +339,7 @@ namespace RushAndCrush
                 GeneratingCustomerChoice1(speechfoodw + 20 + speechfoodw, 0);
                 GeneratingCustomerChoice1(speechfoodw + 10, 90);
                 GeneratingCustomerChoice2();
-                GeneratingCustomerChoice3();
+                //GeneratingCustomerChoice3();
             }
             else if (customerChoiceNumber == 5)
             {
@@ -360,7 +349,7 @@ namespace RushAndCrush
                 GeneratingCustomerChoice1(speechfoodw + 10, 90);
                 GeneratingCustomerChoice1(0, 90);
                 GeneratingCustomerChoice2();
-                GeneratingCustomerChoice3();
+                //GeneratingCustomerChoice3();
             }
             else if (customerChoiceNumber == 6)
             {
@@ -371,7 +360,7 @@ namespace RushAndCrush
                 GeneratingCustomerChoice1(0, 90);
                 GeneratingCustomerChoice1(speechfoodw + 20 + speechfoodw, 90);
                 GeneratingCustomerChoice2();
-                GeneratingCustomerChoice3();
+                //GeneratingCustomerChoice3();
             }
             //level three deals with three choice#s
             else if (customerChoiceNumber == 7)
@@ -384,7 +373,7 @@ namespace RushAndCrush
                 GeneratingCustomerChoice1(speechfoodw + 20 + speechfoodw, 90);
                 GeneratingCustomerChoice1(speechfoodw + 10, 180);
                 GeneratingCustomerChoice2();
-                GeneratingCustomerChoice3();
+                //GeneratingCustomerChoice3();
             }
             else if (customerChoiceNumber == 8)
             {
@@ -397,7 +386,7 @@ namespace RushAndCrush
                 GeneratingCustomerChoice1(speechfoodw + 10, 180);
                 GeneratingCustomerChoice1(0, 180);
                 GeneratingCustomerChoice2();
-                GeneratingCustomerChoice3();
+                //GeneratingCustomerChoice3();
             }
             else if (customerChoiceNumber == 9)
             {
@@ -411,12 +400,13 @@ namespace RushAndCrush
                 GeneratingCustomerChoice1(0, 180);
                 GeneratingCustomerChoice1(speechfoodw + 20 + speechfoodw, 180);
                 GeneratingCustomerChoice2();
-                GeneratingCustomerChoice3();
+                //GeneratingCustomerChoice3();
             }
 
 
         }
         
+        //creating random customers
         public void CustoCreater()
         {
             customerselector = r.Next(1, 11);
@@ -441,12 +431,6 @@ namespace RushAndCrush
 
         private void gameTimer_Tick(object sender, EventArgs e)
         {
-            //for (int i = 10; i >= 0; i--)
-            //{
-            //    outputLabel.Text += "\n" + i;
-            //}
-
-            
             //for every customer in the list,
 
             foreach (Customers c in customers)
@@ -492,8 +476,14 @@ namespace RushAndCrush
         public void TimerOff()
         {
             //mood.levelHeight/mood.height times 20
+            
             earnings += ((double)mood.levelHeight / (double)mood.height) * 20;
             moneyEarned.Text = "$ " + earnings;
+
+            if (((double)mood.levelHeight / (double)mood.height)*20 < 0)
+            {
+                earnings += 0; 
+            }
             
             //if customer number is smaller than the amount of customers in each level, proceed with the level
             if (customerNumber < numbers)
@@ -501,18 +491,7 @@ namespace RushAndCrush
                 customers.RemoveAt(0);
                 OnStart();
                 gameTimer.Enabled = true;
-            }
-            //if the amount of customers is equal to the amount of customers in each level, display the code
-            else if (customerNumber == numbers)
-            {
-                if (earnings >= quotas)
-                {
-                    levelNumber++;
-                    customers.RemoveAt(0);
-                    OnStart();
-                    gameTimer.Enabled = true;
-                }
-                else
+                if (earnings <= 0) //if earnings is less than or equal to zero, 
                 {
                     Form f = this.FindForm();
                     f.Controls.Remove(value: this);
@@ -524,9 +503,55 @@ namespace RushAndCrush
                 }
             }
 
+            //if the amount of customers in the game is equal to the amount of customers in each level, display the code
+            else if (customerNumber == numbers)
+            {
+                if (earnings >= quotas)
+                {
+                    //Moving on the level
+                    levelNumber++;
+                    //if level number is larger than 3, display the following code
+                    if (levelNumber > 3)
+                    {
+                        HighScores s = new HighScores(Convert.ToString(earnings));
+                        Form1.topearnings.Add(s);
+                        save();
+
+                        Form f = this.FindForm();
+                        f.Controls.Remove(value: this);
+                        WinGameScreen wgs = new WinGameScreen();
+                        f.Controls.Add(wgs);
+
+                        wgs.Location = new Point((f.Width - wgs.Width) / 2, (f.Height - wgs.Height) / 2);
+                        wgs.Focus();
+
+                    }
+                    customers.RemoveAt(0);
+                    OnStart();
+                    gameTimer.Enabled = true;
+                    
+                }
+                else //go to lose screen 
+                {
+                    //adding the earnings to the list and saving the list 
+                    HighScores s = new HighScores(Convert.ToString(earnings));
+                    Form1.topearnings.Add(s);
+                    save();
+
+                    Form f = this.FindForm();
+                    f.Controls.Remove(value: this);
+                    GameOverScreen gos = new GameOverScreen();
+                    f.Controls.Add(gos);
+
+                    gos.Location = new Point((f.Width - gos.Width) / 2, (f.Height - gos.Height) / 2);
+                    gos.Focus();
+                    
+                }
+            }
+
         }
 
-
+        //generating food choices
         public void GeneratingCustomerChoice1(int movex, int movey)
         {
             int cr1;
@@ -582,6 +607,7 @@ namespace RushAndCrush
 
         }
 
+        //generating sauce type
         public void GeneratingCustomerChoice2()
         {
             int c2 = r.Next(1, 4);
@@ -603,23 +629,29 @@ namespace RushAndCrush
                 custochoice2.Add(tth);
             }
         }
-
-        public void GeneratingCustomerChoice3()
+        
+        //Saving the scores
+        public void save()
         {
-            int c3 = r.Next(1, 3);
-            if (c3 == 1)
-            {
-                Drink dr1 = new Drink(90 - speechfoodw/2, 410, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.chocolated);
-                custochoice3.Add(dr1);
+            XmlWriter writer = XmlWriter.Create("HighScores.xml", null);
 
-            }
-            else if (c3 == 2)
+            writer.WriteStartElement("Scores");
+
+            foreach (HighScores h in Form1.topearnings)
             {
-                Drink dr2 = new Drink(90 - speechfoodw/2, 410, speechfoodw, speechfoodh, RushAndCrush.Properties.Resources.strawberryd);
-                custochoice3.Add(dr2);
+                writer.WriteStartElement("Score");
+
+                writer.WriteElementString("score", h.highScores);
+
+                writer.WriteEndElement();
             }
+
+            writer.WriteEndElement();
+
+            writer.Close();
         }
 
+        
         //Reading the levels...will need to convert all of the levels stored in one file 
         public void loadLevel01()
         {
@@ -785,10 +817,10 @@ namespace RushAndCrush
                 e.Graphics.FillEllipse(objectbrush, t.x, t.y, t.w, t.h);
             }
 
-            foreach (Drink d in custochoice3)
-            {
-                e.Graphics.DrawImage(d.pic, d.x, d.y, d.w, d.h);
-            }
+            //foreach (Drink d in custochoice3)
+            //{
+            //    e.Graphics.DrawImage(d.pic, d.x, d.y, d.w, d.h);
+            //}
         }
 
 

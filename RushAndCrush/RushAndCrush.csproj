@@ -70,6 +70,7 @@
     <Compile Include="GameScreen.Designer.cs">
       <DependentUpon>GameScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="HighScores.cs" />
     <Compile Include="HighScoreScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -217,6 +218,8 @@
   <ItemGroup>
     <None Include="Resources\p10.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\backgroundSound.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

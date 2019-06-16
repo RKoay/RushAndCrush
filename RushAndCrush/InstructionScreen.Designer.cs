@@ -37,7 +37,7 @@
             // 
             this.instructionLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.instructionLabel.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.instructionLabel.Location = new System.Drawing.Point(0, 164);
+            this.instructionLabel.Location = new System.Drawing.Point(0, 88);
             this.instructionLabel.Name = "instructionLabel";
             this.instructionLabel.Size = new System.Drawing.Size(1500, 123);
             this.instructionLabel.TabIndex = 1;
@@ -47,7 +47,7 @@
             // instructions
             // 
             this.instructions.BackColor = System.Drawing.Color.Snow;
-            this.instructions.Location = new System.Drawing.Point(165, 327);
+            this.instructions.Location = new System.Drawing.Point(165, 284);
             this.instructions.Name = "instructions";
             this.instructions.Size = new System.Drawing.Size(1184, 750);
             this.instructions.TabIndex = 2;
@@ -58,11 +58,11 @@
             this.commandLabel.BackColor = System.Drawing.Color.DarkRed;
             this.commandLabel.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.commandLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.commandLabel.Location = new System.Drawing.Point(165, 1077);
+            this.commandLabel.Location = new System.Drawing.Point(165, 1034);
             this.commandLabel.Name = "commandLabel";
-            this.commandLabel.Size = new System.Drawing.Size(1184, 119);
+            this.commandLabel.Size = new System.Drawing.Size(1184, 128);
             this.commandLabel.TabIndex = 3;
-            this.commandLabel.Text = "\r\nPress Enter to Play, Press Escape to Exit";
+            this.commandLabel.Text = "\r\nPress Enter to go to Play, Press Escape to Exit\r\n\r\n\r\n";
             this.commandLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // InstructionScreen
@@ -75,6 +75,8 @@
             this.Controls.Add(this.instructionLabel);
             this.Name = "InstructionScreen";
             this.Size = new System.Drawing.Size(1500, 1200);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.InstructionScreen_KeyUp);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.InstructionScreen_PreviewKeyDown);
             this.ResumeLayout(false);
 
         }

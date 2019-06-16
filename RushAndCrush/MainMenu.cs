@@ -37,6 +37,7 @@ namespace RushAndCrush
             f.Controls.Remove(value: this);
             InstructionScreen instr = new InstructionScreen();
             f.Controls.Add(instr);
+            instr.Focus();
 
             instr.Location = new Point((f.Width - instr.Width) / 2, (f.Height - instr.Height) / 2);
         }
@@ -49,6 +50,7 @@ namespace RushAndCrush
             f.Controls.Remove(value: this);
             HighScoreScreen hs = new HighScoreScreen();
             f.Controls.Add(hs);
+            hs.Focus();
 
             hs.Location = new Point((f.Width - hs.Width) / 2, (f.Height - hs.Height) / 2);
         }

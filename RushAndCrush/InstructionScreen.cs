@@ -15,8 +15,8 @@ namespace RushAndCrush
         public InstructionScreen()
         {
             InitializeComponent();
-            //giving the instructions
-            instructions.Text = "WHAT IS THE GOAL OF THE GAME ? \n " +
+
+            instructions.Text = "WHAT IS THE GOAL OF THE GAME ? \n" +
                 "The goal of the game is to earn as much money as possible in order to move on to the next level and win! \n\n" +
                 "WHAT ARE THE CONTROL KEYS ? \n" +
                 "Use the Arrows key to highlight around in order to navigate the game \n" +
@@ -29,8 +29,44 @@ namespace RushAndCrush
                 "HOW TO MOVE ON TO THE NEXT LEVEL ? \n" +
                 "After reaching a certain quota, users are able to move on to the next level \n";
 
+
         }
 
         
+        private void InstructionScreen_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Enter:
+                    Form f1 = this.FindForm();
+                    f1.Controls.Remove(value: this);
+                    GameScreen gs = new GameScreen();
+                    f1.Controls.Add(gs);
+
+                    gs.Location = new Point((f1.Width - gs.Width) / 2, (f1.Height - gs.Height) / 2);
+                    gs.Focus();
+                    break;
+                case Keys.Escape:
+                    Form f2 = this.FindForm();
+                    f2.Controls.Remove(value: this);
+                    MainMenu mm = new MainMenu();
+                    f2.Controls.Add(mm);
+
+                    mm.Location = new Point((f2.Width - mm.Width) / 2, (f2.Height - mm.Height) / 2);
+                    mm.Focus();
+                    break;
+            }
+        }
+
+        private void InstructionScreen_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Enter:
+                    break;
+                case Keys.Escape:
+                    break;
+            }
+        }
     }
 }
