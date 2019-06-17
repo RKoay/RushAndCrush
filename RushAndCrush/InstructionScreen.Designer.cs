@@ -47,9 +47,9 @@
             // instructions
             // 
             this.instructions.BackColor = System.Drawing.Color.Snow;
-            this.instructions.Location = new System.Drawing.Point(165, 284);
+            this.instructions.Location = new System.Drawing.Point(82, 237);
             this.instructions.Name = "instructions";
-            this.instructions.Size = new System.Drawing.Size(1184, 750);
+            this.instructions.Size = new System.Drawing.Size(1327, 795);
             this.instructions.TabIndex = 2;
             this.instructions.Text = "\r\n";
             // 

@@ -29,49 +29,50 @@
         private void InitializeComponent()
         {
             this.titleLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
+            this.decoLabel1 = new System.Windows.Forms.Label();
+            this.decoLabel2 = new System.Windows.Forms.Label();
+            this.decoLabel3 = new System.Windows.Forms.Label();
+            this.decoLabel4 = new System.Windows.Forms.Label();
+            this.decoLabel5 = new System.Windows.Forms.Label();
+            this.decoLabel6 = new System.Windows.Forms.Label();
+            this.decoLabel7 = new System.Windows.Forms.Label();
+            this.decoLabel8 = new System.Windows.Forms.Label();
+            this.decoLabel9 = new System.Windows.Forms.Label();
+            this.decoLabel10 = new System.Windows.Forms.Label();
+            this.decoLabel11 = new System.Windows.Forms.Label();
+            this.decoLabel12 = new System.Windows.Forms.Label();
+            this.decoLabel13 = new System.Windows.Forms.Label();
+            this.decoLabel14 = new System.Windows.Forms.Label();
+            this.decoLabel15 = new System.Windows.Forms.Label();
+            this.decoLabel16 = new System.Windows.Forms.Label();
+            this.decoLabel17 = new System.Windows.Forms.Label();
+            this.decoLabel18 = new System.Windows.Forms.Label();
+            this.decoLabel19 = new System.Windows.Forms.Label();
+            this.decoLabel20 = new System.Windows.Forms.Label();
+            this.decoLabel21 = new System.Windows.Forms.Label();
+            this.decoLabel22 = new System.Windows.Forms.Label();
+            this.decoLabel23 = new System.Windows.Forms.Label();
+            this.decoLabel24 = new System.Windows.Forms.Label();
+            this.decoLabel25 = new System.Windows.Forms.Label();
+            this.decoLabel26 = new System.Windows.Forms.Label();
+            this.decoLabel27 = new System.Windows.Forms.Label();
+            this.decoLabel28 = new System.Windows.Forms.Label();
+            this.decoLabel29 = new System.Windows.Forms.Label();
+            this.decoLabel30 = new System.Windows.Forms.Label();
+            this.decoLabel31 = new System.Windows.Forms.Label();
+            this.decoLabel32 = new System.Windows.Forms.Label();
+            this.decoLabel33 = new System.Windows.Forms.Label();
+            this.decoLabel34 = new System.Windows.Forms.Label();
+            this.decoLabel35 = new System.Windows.Forms.Label();
+            this.decoLabel36 = new System.Windows.Forms.Label();
+            this.decoLabel37 = new System.Windows.Forms.Label();
+            this.decoLabel38 = new System.Windows.Forms.Label();
             this.playButton = new System.Windows.Forms.Button();
             this.instructionButton = new System.Windows.Forms.Button();
             this.highScoreButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.sandwichImage = new System.Windows.Forms.PictureBox();
+            this.commandLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sandwichImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,391 +87,394 @@
             this.titleLabel.Text = "Rush And Crush";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(65, 401);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 60);
-            this.label1.TabIndex = 2;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(131, 401);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 60);
-            this.label2.TabIndex = 3;
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(197, 401);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 60);
-            this.label3.TabIndex = 4;
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.Black;
-            this.label4.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(263, 401);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 60);
-            this.label4.TabIndex = 5;
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(329, 401);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 60);
-            this.label5.TabIndex = 6;
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Black;
-            this.label6.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(395, 401);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 60);
-            this.label6.TabIndex = 7;
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(461, 401);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 60);
-            this.label7.TabIndex = 8;
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.Black;
-            this.label8.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(527, 401);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 60);
-            this.label8.TabIndex = 9;
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.Black;
-            this.label9.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(659, 401);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(60, 60);
-            this.label9.TabIndex = 10;
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label10.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(593, 401);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 60);
-            this.label10.TabIndex = 11;
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label11.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(725, 401);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 60);
-            this.label11.TabIndex = 12;
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.Black;
-            this.label12.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(725, 470);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 60);
-            this.label12.TabIndex = 13;
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label13.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(725, 542);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 60);
-            this.label13.TabIndex = 14;
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.BackColor = System.Drawing.Color.Black;
-            this.label14.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(725, 613);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(60, 60);
-            this.label14.TabIndex = 15;
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label15.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(725, 685);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(60, 60);
-            this.label15.TabIndex = 16;
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label16
-            // 
-            this.label16.BackColor = System.Drawing.Color.Black;
-            this.label16.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(725, 755);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 60);
-            this.label16.TabIndex = 17;
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label17
-            // 
-            this.label17.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label17.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(725, 826);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 60);
-            this.label17.TabIndex = 18;
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label18
-            // 
-            this.label18.BackColor = System.Drawing.Color.Black;
-            this.label18.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(725, 898);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(60, 60);
-            this.label18.TabIndex = 19;
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label19
-            // 
-            this.label19.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label19.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(725, 969);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(60, 60);
-            this.label19.TabIndex = 20;
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.BackColor = System.Drawing.Color.Black;
-            this.label20.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(725, 1040);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(60, 60);
-            this.label20.TabIndex = 21;
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label21
-            // 
-            this.label21.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label21.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(655, 1040);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(60, 60);
-            this.label21.TabIndex = 22;
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label22
-            // 
-            this.label22.BackColor = System.Drawing.Color.Black;
-            this.label22.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(589, 1040);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(60, 60);
-            this.label22.TabIndex = 23;
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label23
-            // 
-            this.label23.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label23.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(523, 1040);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(60, 60);
-            this.label23.TabIndex = 24;
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label24
-            // 
-            this.label24.BackColor = System.Drawing.Color.Black;
-            this.label24.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(457, 1040);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(60, 60);
-            this.label24.TabIndex = 25;
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label25
-            // 
-            this.label25.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label25.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(391, 1040);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(60, 60);
-            this.label25.TabIndex = 26;
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label26
-            // 
-            this.label26.BackColor = System.Drawing.Color.Black;
-            this.label26.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(325, 1040);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(60, 60);
-            this.label26.TabIndex = 27;
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label27
-            // 
-            this.label27.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label27.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(259, 1040);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(60, 60);
-            this.label27.TabIndex = 28;
-            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label28
-            // 
-            this.label28.BackColor = System.Drawing.Color.Black;
-            this.label28.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(193, 1040);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(60, 60);
-            this.label28.TabIndex = 29;
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label29
-            // 
-            this.label29.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label29.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(127, 1040);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(60, 60);
-            this.label29.TabIndex = 30;
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label30
-            // 
-            this.label30.BackColor = System.Drawing.Color.Black;
-            this.label30.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(61, 1040);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(60, 60);
-            this.label30.TabIndex = 31;
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label31
-            // 
-            this.label31.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label31.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(65, 969);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(60, 60);
-            this.label31.TabIndex = 32;
-            this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label32
-            // 
-            this.label32.BackColor = System.Drawing.Color.Black;
-            this.label32.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(65, 898);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(60, 60);
-            this.label32.TabIndex = 33;
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label33
-            // 
-            this.label33.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label33.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(61, 826);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(60, 60);
-            this.label33.TabIndex = 34;
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label34
-            // 
-            this.label34.BackColor = System.Drawing.Color.Black;
-            this.label34.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(61, 755);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(60, 60);
-            this.label34.TabIndex = 35;
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label35
-            // 
-            this.label35.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label35.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(61, 685);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(60, 60);
-            this.label35.TabIndex = 36;
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label36
-            // 
-            this.label36.BackColor = System.Drawing.Color.Black;
-            this.label36.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(61, 613);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(60, 60);
-            this.label36.TabIndex = 37;
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label37
-            // 
-            this.label37.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label37.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(61, 542);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(60, 60);
-            this.label37.TabIndex = 38;
-            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label38
-            // 
-            this.label38.BackColor = System.Drawing.Color.Black;
-            this.label38.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(61, 470);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(60, 60);
-            this.label38.TabIndex = 39;
-            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // decoLabel1
+            // 
+            this.decoLabel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel1.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel1.Location = new System.Drawing.Point(65, 401);
+            this.decoLabel1.Name = "decoLabel1";
+            this.decoLabel1.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel1.TabIndex = 2;
+            this.decoLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel2
+            // 
+            this.decoLabel2.BackColor = System.Drawing.Color.Black;
+            this.decoLabel2.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel2.Location = new System.Drawing.Point(131, 401);
+            this.decoLabel2.Name = "decoLabel2";
+            this.decoLabel2.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel2.TabIndex = 3;
+            this.decoLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel3
+            // 
+            this.decoLabel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel3.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel3.Location = new System.Drawing.Point(197, 401);
+            this.decoLabel3.Name = "decoLabel3";
+            this.decoLabel3.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel3.TabIndex = 4;
+            this.decoLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel4
+            // 
+            this.decoLabel4.BackColor = System.Drawing.Color.Black;
+            this.decoLabel4.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel4.Location = new System.Drawing.Point(263, 401);
+            this.decoLabel4.Name = "decoLabel4";
+            this.decoLabel4.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel4.TabIndex = 5;
+            this.decoLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel5
+            // 
+            this.decoLabel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel5.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel5.Location = new System.Drawing.Point(329, 401);
+            this.decoLabel5.Name = "decoLabel5";
+            this.decoLabel5.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel5.TabIndex = 6;
+            this.decoLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel6
+            // 
+            this.decoLabel6.BackColor = System.Drawing.Color.Black;
+            this.decoLabel6.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel6.Location = new System.Drawing.Point(395, 401);
+            this.decoLabel6.Name = "decoLabel6";
+            this.decoLabel6.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel6.TabIndex = 7;
+            this.decoLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel7
+            // 
+            this.decoLabel7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel7.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel7.Location = new System.Drawing.Point(461, 401);
+            this.decoLabel7.Name = "decoLabel7";
+            this.decoLabel7.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel7.TabIndex = 8;
+            this.decoLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel8
+            // 
+            this.decoLabel8.BackColor = System.Drawing.Color.Black;
+            this.decoLabel8.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel8.Location = new System.Drawing.Point(527, 401);
+            this.decoLabel8.Name = "decoLabel8";
+            this.decoLabel8.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel8.TabIndex = 9;
+            this.decoLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel9
+            // 
+            this.decoLabel9.BackColor = System.Drawing.Color.Black;
+            this.decoLabel9.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel9.Location = new System.Drawing.Point(659, 401);
+            this.decoLabel9.Name = "decoLabel9";
+            this.decoLabel9.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel9.TabIndex = 10;
+            this.decoLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel10
+            // 
+            this.decoLabel10.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel10.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel10.Location = new System.Drawing.Point(593, 401);
+            this.decoLabel10.Name = "decoLabel10";
+            this.decoLabel10.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel10.TabIndex = 11;
+            this.decoLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel11
+            // 
+            this.decoLabel11.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel11.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel11.Location = new System.Drawing.Point(725, 401);
+            this.decoLabel11.Name = "decoLabel11";
+            this.decoLabel11.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel11.TabIndex = 12;
+            this.decoLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel12
+            // 
+            this.decoLabel12.BackColor = System.Drawing.Color.Black;
+            this.decoLabel12.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel12.Location = new System.Drawing.Point(725, 470);
+            this.decoLabel12.Name = "decoLabel12";
+            this.decoLabel12.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel12.TabIndex = 13;
+            this.decoLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel13
+            // 
+            this.decoLabel13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel13.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel13.Location = new System.Drawing.Point(725, 542);
+            this.decoLabel13.Name = "decoLabel13";
+            this.decoLabel13.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel13.TabIndex = 14;
+            this.decoLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel14
+            // 
+            this.decoLabel14.BackColor = System.Drawing.Color.Black;
+            this.decoLabel14.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel14.Location = new System.Drawing.Point(725, 613);
+            this.decoLabel14.Name = "decoLabel14";
+            this.decoLabel14.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel14.TabIndex = 15;
+            this.decoLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel15
+            // 
+            this.decoLabel15.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel15.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel15.Location = new System.Drawing.Point(725, 685);
+            this.decoLabel15.Name = "decoLabel15";
+            this.decoLabel15.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel15.TabIndex = 16;
+            this.decoLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel16
+            // 
+            this.decoLabel16.BackColor = System.Drawing.Color.Black;
+            this.decoLabel16.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel16.Location = new System.Drawing.Point(725, 755);
+            this.decoLabel16.Name = "decoLabel16";
+            this.decoLabel16.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel16.TabIndex = 17;
+            this.decoLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel17
+            // 
+            this.decoLabel17.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel17.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel17.Location = new System.Drawing.Point(725, 826);
+            this.decoLabel17.Name = "decoLabel17";
+            this.decoLabel17.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel17.TabIndex = 18;
+            this.decoLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel18
+            // 
+            this.decoLabel18.BackColor = System.Drawing.Color.Black;
+            this.decoLabel18.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel18.Location = new System.Drawing.Point(725, 898);
+            this.decoLabel18.Name = "decoLabel18";
+            this.decoLabel18.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel18.TabIndex = 19;
+            this.decoLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel19
+            // 
+            this.decoLabel19.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel19.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel19.Location = new System.Drawing.Point(725, 969);
+            this.decoLabel19.Name = "decoLabel19";
+            this.decoLabel19.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel19.TabIndex = 20;
+            this.decoLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel20
+            // 
+            this.decoLabel20.BackColor = System.Drawing.Color.Black;
+            this.decoLabel20.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel20.Location = new System.Drawing.Point(725, 1040);
+            this.decoLabel20.Name = "decoLabel20";
+            this.decoLabel20.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel20.TabIndex = 21;
+            this.decoLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel21
+            // 
+            this.decoLabel21.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel21.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel21.Location = new System.Drawing.Point(655, 1040);
+            this.decoLabel21.Name = "decoLabel21";
+            this.decoLabel21.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel21.TabIndex = 22;
+            this.decoLabel21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel22
+            // 
+            this.decoLabel22.BackColor = System.Drawing.Color.Black;
+            this.decoLabel22.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel22.Location = new System.Drawing.Point(589, 1040);
+            this.decoLabel22.Name = "decoLabel22";
+            this.decoLabel22.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel22.TabIndex = 23;
+            this.decoLabel22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel23
+            // 
+            this.decoLabel23.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel23.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel23.Location = new System.Drawing.Point(523, 1040);
+            this.decoLabel23.Name = "decoLabel23";
+            this.decoLabel23.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel23.TabIndex = 24;
+            this.decoLabel23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel24
+            // 
+            this.decoLabel24.BackColor = System.Drawing.Color.Black;
+            this.decoLabel24.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel24.Location = new System.Drawing.Point(457, 1040);
+            this.decoLabel24.Name = "decoLabel24";
+            this.decoLabel24.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel24.TabIndex = 25;
+            this.decoLabel24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel25
+            // 
+            this.decoLabel25.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel25.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel25.Location = new System.Drawing.Point(391, 1040);
+            this.decoLabel25.Name = "decoLabel25";
+            this.decoLabel25.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel25.TabIndex = 26;
+            this.decoLabel25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel26
+            // 
+            this.decoLabel26.BackColor = System.Drawing.Color.Black;
+            this.decoLabel26.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel26.Location = new System.Drawing.Point(325, 1040);
+            this.decoLabel26.Name = "decoLabel26";
+            this.decoLabel26.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel26.TabIndex = 27;
+            this.decoLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel27
+            // 
+            this.decoLabel27.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel27.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel27.Location = new System.Drawing.Point(259, 1040);
+            this.decoLabel27.Name = "decoLabel27";
+            this.decoLabel27.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel27.TabIndex = 28;
+            this.decoLabel27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel28
+            // 
+            this.decoLabel28.BackColor = System.Drawing.Color.Black;
+            this.decoLabel28.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel28.Location = new System.Drawing.Point(193, 1040);
+            this.decoLabel28.Name = "decoLabel28";
+            this.decoLabel28.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel28.TabIndex = 29;
+            this.decoLabel28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel29
+            // 
+            this.decoLabel29.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel29.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel29.Location = new System.Drawing.Point(127, 1040);
+            this.decoLabel29.Name = "decoLabel29";
+            this.decoLabel29.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel29.TabIndex = 30;
+            this.decoLabel29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel30
+            // 
+            this.decoLabel30.BackColor = System.Drawing.Color.Black;
+            this.decoLabel30.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel30.Location = new System.Drawing.Point(61, 1040);
+            this.decoLabel30.Name = "decoLabel30";
+            this.decoLabel30.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel30.TabIndex = 31;
+            this.decoLabel30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel31
+            // 
+            this.decoLabel31.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel31.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel31.Location = new System.Drawing.Point(65, 969);
+            this.decoLabel31.Name = "decoLabel31";
+            this.decoLabel31.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel31.TabIndex = 32;
+            this.decoLabel31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel32
+            // 
+            this.decoLabel32.BackColor = System.Drawing.Color.Black;
+            this.decoLabel32.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel32.Location = new System.Drawing.Point(65, 898);
+            this.decoLabel32.Name = "decoLabel32";
+            this.decoLabel32.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel32.TabIndex = 33;
+            this.decoLabel32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel33
+            // 
+            this.decoLabel33.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel33.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel33.Location = new System.Drawing.Point(61, 826);
+            this.decoLabel33.Name = "decoLabel33";
+            this.decoLabel33.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel33.TabIndex = 34;
+            this.decoLabel33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel34
+            // 
+            this.decoLabel34.BackColor = System.Drawing.Color.Black;
+            this.decoLabel34.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel34.Location = new System.Drawing.Point(61, 755);
+            this.decoLabel34.Name = "decoLabel34";
+            this.decoLabel34.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel34.TabIndex = 35;
+            this.decoLabel34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel35
+            // 
+            this.decoLabel35.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel35.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel35.Location = new System.Drawing.Point(61, 685);
+            this.decoLabel35.Name = "decoLabel35";
+            this.decoLabel35.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel35.TabIndex = 36;
+            this.decoLabel35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel36
+            // 
+            this.decoLabel36.BackColor = System.Drawing.Color.Black;
+            this.decoLabel36.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel36.Location = new System.Drawing.Point(61, 613);
+            this.decoLabel36.Name = "decoLabel36";
+            this.decoLabel36.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel36.TabIndex = 37;
+            this.decoLabel36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel37
+            // 
+            this.decoLabel37.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.decoLabel37.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel37.Location = new System.Drawing.Point(61, 542);
+            this.decoLabel37.Name = "decoLabel37";
+            this.decoLabel37.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel37.TabIndex = 38;
+            this.decoLabel37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // decoLabel38
+            // 
+            this.decoLabel38.BackColor = System.Drawing.Color.Black;
+            this.decoLabel38.Font = new System.Drawing.Font("Impact", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decoLabel38.Location = new System.Drawing.Point(61, 470);
+            this.decoLabel38.Name = "decoLabel38";
+            this.decoLabel38.Size = new System.Drawing.Size(60, 60);
+            this.decoLabel38.TabIndex = 39;
+            this.decoLabel38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // playButton
             // 
             this.playButton.BackColor = System.Drawing.Color.Salmon;
+            this.playButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.playButton.FlatAppearance.BorderSize = 10;
             this.playButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
             this.playButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.playButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.playButton.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playButton.Location = new System.Drawing.Point(933, 401);
             this.playButton.Name = "playButton";
@@ -483,8 +487,11 @@
             // instructionButton
             // 
             this.instructionButton.BackColor = System.Drawing.Color.Tomato;
+            this.instructionButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.instructionButton.FlatAppearance.BorderSize = 10;
             this.instructionButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
             this.instructionButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.instructionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.instructionButton.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.instructionButton.Location = new System.Drawing.Point(933, 594);
             this.instructionButton.Name = "instructionButton";
@@ -497,8 +504,11 @@
             // highScoreButton
             // 
             this.highScoreButton.BackColor = System.Drawing.Color.Salmon;
+            this.highScoreButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.highScoreButton.FlatAppearance.BorderSize = 10;
             this.highScoreButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
             this.highScoreButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.highScoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.highScoreButton.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.highScoreButton.Location = new System.Drawing.Point(933, 787);
             this.highScoreButton.Name = "highScoreButton";
@@ -511,8 +521,11 @@
             // exitButton
             // 
             this.exitButton.BackColor = System.Drawing.Color.Tomato;
+            this.exitButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.exitButton.FlatAppearance.BorderSize = 10;
             this.exitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
             this.exitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitButton.Font = new System.Drawing.Font("Impact", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.Location = new System.Drawing.Point(933, 971);
             this.exitButton.Name = "exitButton";
@@ -532,107 +545,121 @@
             this.sandwichImage.TabIndex = 1;
             this.sandwichImage.TabStop = false;
             // 
+            // commandLabel
+            // 
+            this.commandLabel.AutoSize = true;
+            this.commandLabel.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.commandLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.commandLabel.Location = new System.Drawing.Point(361, 285);
+            this.commandLabel.Name = "commandLabel";
+            this.commandLabel.Size = new System.Drawing.Size(832, 68);
+            this.commandLabel.TabIndex = 44;
+            this.commandLabel.Text = "Use mouse to click on the buttons";
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Firebrick;
+            this.Controls.Add(this.commandLabel);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.highScoreButton);
             this.Controls.Add(this.instructionButton);
             this.Controls.Add(this.playButton);
-            this.Controls.Add(this.label38);
-            this.Controls.Add(this.label37);
-            this.Controls.Add(this.label36);
-            this.Controls.Add(this.label35);
-            this.Controls.Add(this.label34);
-            this.Controls.Add(this.label33);
-            this.Controls.Add(this.label32);
-            this.Controls.Add(this.label31);
-            this.Controls.Add(this.label30);
-            this.Controls.Add(this.label29);
-            this.Controls.Add(this.label28);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.label26);
-            this.Controls.Add(this.label25);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.decoLabel38);
+            this.Controls.Add(this.decoLabel37);
+            this.Controls.Add(this.decoLabel36);
+            this.Controls.Add(this.decoLabel35);
+            this.Controls.Add(this.decoLabel34);
+            this.Controls.Add(this.decoLabel33);
+            this.Controls.Add(this.decoLabel32);
+            this.Controls.Add(this.decoLabel31);
+            this.Controls.Add(this.decoLabel30);
+            this.Controls.Add(this.decoLabel29);
+            this.Controls.Add(this.decoLabel28);
+            this.Controls.Add(this.decoLabel27);
+            this.Controls.Add(this.decoLabel26);
+            this.Controls.Add(this.decoLabel25);
+            this.Controls.Add(this.decoLabel24);
+            this.Controls.Add(this.decoLabel23);
+            this.Controls.Add(this.decoLabel22);
+            this.Controls.Add(this.decoLabel21);
+            this.Controls.Add(this.decoLabel20);
+            this.Controls.Add(this.decoLabel19);
+            this.Controls.Add(this.decoLabel18);
+            this.Controls.Add(this.decoLabel17);
+            this.Controls.Add(this.decoLabel16);
+            this.Controls.Add(this.decoLabel15);
+            this.Controls.Add(this.decoLabel14);
+            this.Controls.Add(this.decoLabel13);
+            this.Controls.Add(this.decoLabel12);
+            this.Controls.Add(this.decoLabel11);
+            this.Controls.Add(this.decoLabel10);
+            this.Controls.Add(this.decoLabel9);
+            this.Controls.Add(this.decoLabel8);
+            this.Controls.Add(this.decoLabel7);
+            this.Controls.Add(this.decoLabel6);
+            this.Controls.Add(this.decoLabel5);
+            this.Controls.Add(this.decoLabel4);
+            this.Controls.Add(this.decoLabel3);
+            this.Controls.Add(this.decoLabel2);
+            this.Controls.Add(this.decoLabel1);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.sandwichImage);
             this.Name = "MainMenu";
             this.Size = new System.Drawing.Size(1500, 1200);
             ((System.ComponentModel.ISupportInitialize)(this.sandwichImage)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label decoLabel1;
+        private System.Windows.Forms.Label decoLabel2;
+        private System.Windows.Forms.Label decoLabel3;
+        private System.Windows.Forms.Label decoLabel4;
+        private System.Windows.Forms.Label decoLabel5;
+        private System.Windows.Forms.Label decoLabel6;
+        private System.Windows.Forms.Label decoLabel7;
+        private System.Windows.Forms.Label decoLabel8;
+        private System.Windows.Forms.Label decoLabel9;
+        private System.Windows.Forms.Label decoLabel10;
+        private System.Windows.Forms.Label decoLabel11;
+        private System.Windows.Forms.Label decoLabel12;
+        private System.Windows.Forms.Label decoLabel13;
+        private System.Windows.Forms.Label decoLabel14;
+        private System.Windows.Forms.Label decoLabel15;
+        private System.Windows.Forms.Label decoLabel16;
+        private System.Windows.Forms.Label decoLabel17;
+        private System.Windows.Forms.Label decoLabel18;
+        private System.Windows.Forms.Label decoLabel19;
+        private System.Windows.Forms.Label decoLabel20;
+        private System.Windows.Forms.Label decoLabel21;
+        private System.Windows.Forms.Label decoLabel22;
+        private System.Windows.Forms.Label decoLabel23;
+        private System.Windows.Forms.Label decoLabel24;
+        private System.Windows.Forms.Label decoLabel25;
+        private System.Windows.Forms.Label decoLabel26;
+        private System.Windows.Forms.Label decoLabel27;
+        private System.Windows.Forms.Label decoLabel28;
+        private System.Windows.Forms.Label decoLabel29;
+        private System.Windows.Forms.Label decoLabel30;
+        private System.Windows.Forms.Label decoLabel31;
+        private System.Windows.Forms.Label decoLabel32;
+        private System.Windows.Forms.Label decoLabel33;
+        private System.Windows.Forms.Label decoLabel34;
+        private System.Windows.Forms.Label decoLabel35;
+        private System.Windows.Forms.Label decoLabel36;
+        private System.Windows.Forms.Label decoLabel37;
+        private System.Windows.Forms.Label decoLabel38;
         private System.Windows.Forms.Button playButton;
         private System.Windows.Forms.Button instructionButton;
         private System.Windows.Forms.Button highScoreButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.PictureBox sandwichImage;
+        private System.Windows.Forms.Label commandLabel;
     }
 }

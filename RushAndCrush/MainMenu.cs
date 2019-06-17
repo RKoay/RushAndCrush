@@ -60,7 +60,6 @@ namespace RushAndCrush
             //if exit button is clicked, exit the game 
             Application.Exit();
         }
-
         
     }
 }

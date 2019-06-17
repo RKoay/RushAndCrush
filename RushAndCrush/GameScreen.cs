@@ -13,7 +13,6 @@ namespace RushAndCrush
 {
     public partial class GameScreen : UserControl
     {
-        Boolean leftArrowDown, rightArrowDown, upArrowDown, downArrowDown, spaceDown, enterDown, escDown;
         List<Object> items = new List<Object>();
         List<Food> foods = new List<Food>();
         List<Drink> drinks = new List<Drink>();
@@ -112,19 +111,14 @@ namespace RushAndCrush
             switch (e.KeyCode)
             {
                 case Keys.Left:
-                    leftArrowDown = true;
                     break;
                 case Keys.Right:
-                    rightArrowDown = true;
                     break;
                 case Keys.Up:
-                    upArrowDown = true;
                     break;
                 case Keys.Down:
-                    downArrowDown = true;
                     break;
                 case Keys.Space:
-                    spaceDown = true;
                     //Coverups will need to be placed here 
                     //Object coverUp = new Object(f.x, f.y, f.w, f.h, Color.Black);
                     //coverUps.Add(coverUp);
@@ -147,7 +141,6 @@ namespace RushAndCrush
                     }
                     break;
                 case Keys.Enter:
-                    enterDown = true;
                     if (custochoice1.Count() == yourchoice1.Count() && custochoice2.Count() == yourchoice2.Count())
                     {
                         //comparing both choices
@@ -173,7 +166,13 @@ namespace RushAndCrush
                     TimerOff();
                     break;
                 case Keys.Escape:
-                    escDown = true;
+                    Form form = this.FindForm();
+                    form.Controls.Remove(value: this);
+                    MainMenu mm = new MainMenu();
+                    form.Controls.Add(mm);
+                    mm.Focus();
+
+                    mm.Location = new Point((form.Width - mm.Width) / 2, (form.Height - mm.Height) / 2);
                     break;
             }
         }
@@ -185,7 +184,6 @@ namespace RushAndCrush
             {
 
                 case Keys.Left:
-                    leftArrowDown = false;
                     if (chooser.x > 20)
                     {
                         chooser.chooserMove(foodw + 10, 0, "left");
@@ -193,7 +191,6 @@ namespace RushAndCrush
                     Refresh();
                     break;
                 case Keys.Right:
-                    rightArrowDown = false;
                     if (chooser.x < 670)
                     {
                         chooser.chooserMove(foodw + 10, 0, "right");
@@ -201,7 +198,6 @@ namespace RushAndCrush
                     Refresh();
                     break;
                 case Keys.Up:
-                    upArrowDown = false;
                     if (chooser.y == 917)
                     {
                         chooser.chooserMove(0, foodh + 10, "up");
@@ -209,7 +205,6 @@ namespace RushAndCrush
                     Refresh();
                     break;
                 case Keys.Down:
-                    downArrowDown = false;
                     if (chooser.y == 735)
                     {
                         chooser.chooserMove(0, foodh + 10, "down");
@@ -217,13 +212,10 @@ namespace RushAndCrush
                     Refresh();
                     break;
                 case Keys.Space:
-                    spaceDown = false;
                     break;
                 case Keys.Enter:
-                    enterDown = false;
                     break;
                 case Keys.Escape:
-                    escDown = false;
                     break;
             }
         }
@@ -476,18 +468,20 @@ namespace RushAndCrush
         public void TimerOff()
         {
             //mood.levelHeight/mood.height times 20
+            double sandwichMoney = ((double)mood.levelHeight / (double)mood.height) * 20;
             
-            earnings += ((double)mood.levelHeight / (double)mood.height) * 20;
-            moneyEarned.Text = "$ " + earnings;
 
             if (((double)mood.levelHeight / (double)mood.height)*20 < 0)
             {
-                earnings += 0; 
+                //should fix the issue of keeping track of money
+                sandwichMoney = 0; 
             }
             
             //if customer number is smaller than the amount of customers in each level, proceed with the level
             if (customerNumber < numbers)
             {
+                earnings += sandwichMoney;
+                moneyEarned.Text = "$ " + earnings;
                 customers.RemoveAt(0);
                 OnStart();
                 gameTimer.Enabled = true;
@@ -516,6 +510,7 @@ namespace RushAndCrush
                         HighScores s = new HighScores(Convert.ToString(earnings));
                         Form1.topearnings.Add(s);
                         save();
+                        //move screen to win screen
 
                         Form f = this.FindForm();
                         f.Controls.Remove(value: this);
