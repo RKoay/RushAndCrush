@@ -18,8 +18,6 @@ namespace RushAndCrush
         List<Drink> drinks = new List<Drink>();
         List<Toppings> toppings = new List<Toppings>();
         List<Customers> customers = new List<Customers>();
-        //To block out the food that has already been selected
-        List<Object> coverUps = new List<Object>();
         
 
         //Relating to Levels
